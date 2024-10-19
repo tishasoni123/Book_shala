@@ -1,0 +1,142 @@
+/* General settings */
+body {
+    background-image: url("images/backkimage.png");
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    margin: 0;
+    min-height: 100vh; /* Ensure the background covers the entire viewport */
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo-image {
+    width: 80px;
+    height: 50px;
+}
+
+.form-control {
+    max-width: 250px;
+}
+
+@media (min-width: 992px) {
+    .form-control {
+        flex-grow: 1;
+    }
+}
+
+/* Categories section */
+.category-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set text color to black */
+}
+
+.category-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Slider */
+.slider {
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    animation: slideAnimation 9s infinite;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+@keyframes slideAnimation {
+    0%, 20%, 100% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-100%); }
+    50%, 70% { transform: translateX(-200%); }
+}
+
+/* Footer */
+footer i {
+    font-size: 24px;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+/* My Cart Section */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.cart-item .quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item .quantity-control button {
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+/* Slider for Price */
+.price-slider {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Bestsellers */
+.book-box {
+    text-align: center;
+    border-radius: 10px;
+}
+
+.book-box img {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    max-height: 450px;
+}
+
+/* Remove underline from category links */
+.nav-link {
+    text-decoration: none; /* Remove underline */
+}
+
+/* Additional styles for links if needed */
+.nav-link:hover {
+    text-decoration: underline; /* Optional hover effect */
+}
